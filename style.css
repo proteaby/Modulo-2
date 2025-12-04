@@ -1,3 +1,9 @@
+
+body{
+
+    font-family:"Dosis", sans-serif;
+}
+
 .producto-tarjeta{
     width: 280px;
     background-color: pink;
