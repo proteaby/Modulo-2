@@ -13,8 +13,67 @@ body{
     background-color: #FCD2E8;
 }
 
+header, main{
+    width:100%;
+    max-width: 1200px; /*se puede cambiar 900, 1000, etc*/
+    margin: 0 auto;
+}
+
 section{
     padding: 25px;
+}
+
+.top-banner{
+    background-color: pink;
+    text-align: center;
+    padding: 6px 25px;
+    font-size: 16px;
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+/*NAV*/
+.nav-principal{
+    background-color: lightpink;
+    padding: 15px 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+
+    /*Agregando Flexbox*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+}
+
+/* Menú de navegación */
+.nav-lista{
+    list-style: none;
+
+    /*Agregando Flexbox*/
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-lista a{
+    text-decoration: none;
+    color: darkred;
+    transition: 0.3s;
+}
+
+.nav-lista a:hover {
+    color: #ff0084;
+    /* cambio de color al el cursor */
 }
 
 
@@ -34,7 +93,7 @@ section{
 }
 
 
-/*Tarjeta*/
+/*Tarjetas de productos*/
 .producto-tarjeta{
     width: 280px;
     background-color: pink;
@@ -50,46 +109,23 @@ section{
     flex: 1 1 240px; /*ocupa minimo 24 px, puede crecer y enocogerse*/
 }
 
-/*NAV*/
-.nav-principal
+/*Cambio al pasar el cursor*/
 .producto-tarjeta:hover{
-    background-color: lightpink;
-    padding: 15px 25px;
-    max-width: 1200px;
-    margin: 0;
-    position: sticky;
-    top:0;
-    z-index: 1000;
-
-    /*Agregando Flexbox*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.logo{
-    font-size: 50px;
-    font-weight: bold;
-    color: darkred;
+.producto-badge{
+    position: absolute;
+    background-color: darkred;
+    top:10px;
+    left:10px;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
-.nav-lista{
-    list-style: none;
-
-    /*Agregando Flexbox*/
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-/*Estilo de los enlaces del menú*/
-.nav-lista a{
-    text-decoration: none;
-    color: darkred;
-    font-size: 18px;
-    font-weight: bold;
-}
 
 /*Imagen*/
 .producto-img{
@@ -123,4 +159,26 @@ section{
 
 .producto-btn:hover{
     background-color: darkred;
+}
+
+
+/*Boton position fixed*/
+.boton-carrito{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: deeppink;
+    color: white;
+    z-index: 1500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;
+}
+
+.boton-carrito:hover{
+    background-color: darkred;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
