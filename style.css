@@ -49,11 +49,6 @@ section{
     flex-wrap: wrap;
 }
 
-.logo{
-    font-size: 50px;
-    font-weight: bold;
-    color: darkred;
-}
 
 /* Menú de navegación */
 .nav-lista{
@@ -76,12 +71,44 @@ section{
     /* cambio de color al el cursor */
 }
 
+.logo{
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+}
 
-#contacto{
+
+.contacto-section{
     background-color: plum;
-    padding: 12px 14px 5px 8px;
-    margin: 10px 10px 5px 10px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+}
 
+.contacto-contenido, .contacto-aside{
+    flex: 1 1 300px;
+}
+
+/* form */
+.form-contacto{
+    background: plum;
+    padding: 20px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-contacto input,
+.form-contacto textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 /*Contenedor de productos*/
