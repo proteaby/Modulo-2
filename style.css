@@ -241,3 +241,72 @@ footer      {
 .cookie-boton:hover {
     background-color: darkred;
 }
+
+/*Diseño responsivo*/
+@media screen and (max-width: 1024px){
+    .nav-principal{
+        padding: 12px 16px;
+    }
+    .nav-tarjeta {
+        flex:1 1 260px;
+    }
+}
+
+/*Diseño responsivo para tablets*/
+@media screen and (max-width: 768px){
+    .top-banner
+    {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .nav-principal {
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-lista {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/*Diseño responsivo para celulares*/
+@media screen and (max-width: 375px){
+    .nav-principal {
+        padding: 10px 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-lista a {
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 14px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
