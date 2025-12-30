@@ -9,7 +9,6 @@
 body {
     /*Fuente traida desde Google fonts */
     font-family: "Dosis", sans-serif;
-    box-sizing: border-box;
     background-color: #feeaf4;
 }
 
@@ -22,21 +21,21 @@ main {
 }
 
 section {
-    padding: 25px;
+    padding: 18px;
 }
 
 .top-banner {
     background-color: pink;
     text-align: center;
     padding: 6px 25px;
-    font-size: 16px;
-    color: rgb(255, 0, 0);
+    font-size: 20px;
+    color: rgb(221, 11, 71);
     font-weight: bold;
 }
 
 /*NAV*/
 .nav-principal {
-    background-color: lightpink;
+    background-color: rgb(17, 4, 62);
     padding: 15px 25px;
     max-width: 1200px;
     margin: 0 auto;
@@ -64,7 +63,7 @@ section {
 
 .nav-lista a {
     text-decoration: none;
-    color: darkred;
+    color: rgb(255, 254, 254);
     transition: 0.3s;
 }
 
@@ -76,24 +75,38 @@ section {
 .logo {
     font-size: 50px;
     font-weight: bold;
-    color: darkred;
+    color: rgb(255, 255, 255);
 }
 
-
+#contacto{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+}
 .contacto-section {
     background-color: plum;
     padding: 20px;
     border-radius: 15px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    list-style: none;
 }
 
-.contacto-contenido,
 .contacto-aside {
-    flex: 1 1 300px;
+    background-color: plum;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.contacto-section,
+.contacto-aside{
+    flex: 1 1 350px;
+}
+
+.imagen-contacto{
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    padding: 10px;
 }
 
 /* form */
@@ -163,6 +176,12 @@ section {
     color: #5d0027;
     margin: 10px 15px;
 }
+.producto-precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: darkred;
+    margin: 10px 0;
+}
 
 /*Boton*/
 .producto-btn {
@@ -215,6 +234,53 @@ section {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/*Sección de marcas*/
+.marcas-section{
+    text-align: center;
+    padding: 40px 25px;
+}
+
+.marcas-section p{
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.marcas-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.marca-tarjeta{
+    background-color: #f7eccf;
+    width: 280px;
+    padding: 60px 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.marca-foto{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
 /*Footer*/
 footer      {
     background-color: lightpink;
@@ -240,6 +306,26 @@ footer      {
 
 .cookie-boton:hover {
     background-color: darkred;
+}
+
+/*Sección general*/
+section{
+    padding: 25px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 /*Diseño responsivo*/
@@ -300,7 +386,7 @@ footer      {
     .nav-lista a {
         font-size: 14px;
     }
-    
+
     section {
         padding: 14px;
     }
