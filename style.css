@@ -1,45 +1,47 @@
 /*Reset básico*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-body{
+body {
     /*Fuente traida desde Google fonts */
-    font-family:"Dosis", sans-serif;
+    font-family: "Dosis", sans-serif;
     box-sizing: border-box;
-    background-color: #FCD2E8;
+    background-color: #feeaf4;
 }
 
-header, main{
-    width:100%;
-    max-width: 1200px; /*se puede cambiar 900, 1000, etc*/
+header,
+main {
+    width: 100%;
+    max-width: 1200px;
+    /*se puede cambiar 900, 1000, etc*/
     margin: 0 auto;
 }
 
-section{
+section {
     padding: 25px;
 }
 
-.top-banner{
+.top-banner {
     background-color: pink;
     text-align: center;
     padding: 6px 25px;
     font-size: 16px;
-    color:rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
     font-weight: bold;
 }
 
 /*NAV*/
-.nav-principal{
+.nav-principal {
     background-color: lightpink;
     padding: 15px 25px;
     max-width: 1200px;
     margin: 0 auto;
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 1000;
 
     /*Agregando Flexbox*/
@@ -51,7 +53,7 @@ section{
 
 
 /* Menú de navegación */
-.nav-lista{
+.nav-lista {
     list-style: none;
 
     /*Agregando Flexbox*/
@@ -60,7 +62,7 @@ section{
     align-items: center;
 }
 
-.nav-lista a{
+.nav-lista a {
     text-decoration: none;
     color: darkred;
     transition: 0.3s;
@@ -71,14 +73,14 @@ section{
     /* cambio de color al el cursor */
 }
 
-.logo{
+.logo {
     font-size: 50px;
     font-weight: bold;
     color: darkred;
 }
 
 
-.contacto-section{
+.contacto-section {
     background-color: plum;
     padding: 20px;
     border-radius: 15px;
@@ -89,12 +91,13 @@ section{
     list-style: none;
 }
 
-.contacto-contenido, .contacto-aside{
+.contacto-contenido,
+.contacto-aside {
     flex: 1 1 300px;
 }
 
 /* form */
-.form-contacto{
+.form-contacto {
     background: plum;
     padding: 20px;
     border-radius: 15px;
@@ -105,14 +108,14 @@ section{
 }
 
 .form-contacto input,
-.form-contacto textarea{
+.form-contacto textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
 }
 
 /*Contenedor de productos*/
-.productos-contenedor{
+.productos-contenedor {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -121,59 +124,48 @@ section{
 
 
 /*Tarjetas de productos*/
-.producto-tarjeta{
-    width: 280px;
+.producto-tarjeta {
     background-color: pink;
-    object-fit: contain;
     text-align: center;
-    margin: 10px;
     display: inline-block;
     border-radius: 15px;
-    padding: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
     transition: transform .2s ease, box-shadow .2s ease;
     /*para que se posicione dentro*/
     position: relative;
-    flex: 1 1 240px; /*ocupa minimo 24 px, puede crecer y enocogerse*/
+    flex: 1 1 240px;
+    /*ocupa minimo 24 px, puede crecer y enocogerse*/
 }
 
 /*Cambio al pasar el cursor*/
-.producto-tarjeta:hover{
+.producto-tarjeta:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.producto-badge{
-    position: absolute;
-    background-color: darkred;
-    top:10px;
-    left:10px;
-    color: white;
-    font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 20px;
-}
-
-
-/*Imagen*/
-.producto-img{
+/* Características detarjeta */
+.producto-img {
     width: 100%;
-    height: 240px;
-    object-fit: cover;
+    height: 220px;
+    object-fit: contain;
+    background-color: #fafafa;
+    padding: 10px;
 }
 
-.producto.titulo{
-    font-size: 20px;
+.producto.titulo {
+    font-size: 22px;
     font-weight: bold;
 }
 
-.producto-desc{
+.producto-desc {
     font-size: 14px;
     color: #5d0027;
     margin: 10px 15px;
 }
 
 /*Boton*/
-.producto-btn{
+.producto-btn {
     background-color: firebrick;
     color: violet;
     border: none;
@@ -184,13 +176,26 @@ section{
 }
 
 
-.producto-btn:hover{
+.producto-btn:hover {
     background-color: darkred;
 }
 
+.producto-badge {
+    position: absolute;
+    background-color: darkred;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+
+
 
 /*Boton position fixed*/
-.boton-carrito{
+.boton-carrito {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -205,7 +210,34 @@ section{
     transition: 0.2s ease-in-out;
 }
 
-.boton-carrito:hover{
+.boton-carrito:hover {
     background-color: darkred;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*Footer*/
+footer      {
+    background-color: lightpink;
+    text-align: center;
+    padding: 15px 25px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: rgb(0, 139, 2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cookie-boton {
+    background-color: deeppink;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cookie-boton:hover {
+    background-color: darkred;
 }
