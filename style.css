@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
-
 body {
     /*Fuente traida desde Google fonts */
     font-family: "Dosis", sans-serif;
     background-color: #feeaf4;
+    text-align: center;
 }
 
 header,
@@ -50,7 +50,6 @@ section {
     flex-wrap: wrap;
 }
 
-
 /* Menú de navegación */
 .nav-lista {
     list-style: none;
@@ -78,13 +77,14 @@ section {
     color: rgb(255, 255, 255);
 }
 
-#contacto{
+#contacto {
     display: flex;
     gap: 30px;
     align-items: flex-start;
     flex-wrap: wrap;
     text-align: center;
 }
+
 .contacto-section {
     background-color: plum;
     padding: 20px;
@@ -98,11 +98,11 @@ section {
 }
 
 .contacto-section,
-.contacto-aside{
+.contacto-aside {
     flex: 1 1 350px;
 }
 
-.imagen-contacto{
+.imagen-contacto {
     width: 100%;
     height: 320px;
     object-fit: contain;
@@ -127,6 +127,15 @@ section {
     border-radius: 6px;
 }
 
+.form-contacto input::placeholder,
+.form-contacto textarea::placeholder {
+    color: #a15c6f;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /*Contenedor de productos*/
 .productos-contenedor {
     padding: 20px;
@@ -134,7 +143,6 @@ section {
     flex-wrap: wrap;
     gap: 20px;
 }
-
 
 /*Tarjetas de productos*/
 .producto-tarjeta {
@@ -176,6 +184,7 @@ section {
     color: #5d0027;
     margin: 10px 15px;
 }
+
 .producto-precio {
     font-size: 18px;
     font-weight: bold;
@@ -194,7 +203,6 @@ section {
     transition: 0.3s;
 }
 
-
 .producto-btn:hover {
     background-color: darkred;
 }
@@ -210,42 +218,41 @@ section {
     border-radius: 20px;
 }
 
-
-
-
 /*Boton position fixed*/
 .boton-carrito {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    font-size: 16px;
+    font-size: 18px;
+    padding: 16px 24px;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 40px;
     background-color: deeppink;
     color: white;
     z-index: 1500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: 0.2s ease-in-out;
+    border: 2px solid white
 }
 
 .boton-carrito:hover {
     background-color: darkred;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
 /*Sección de marcas*/
-.marcas-section{
+.marcas-section {
     text-align: center;
     padding: 40px 25px;
 }
 
-.marcas-section p{
+.marcas-section p {
     max-width: 700px;
     margin: 0 auto 20px;
 }
 
-.marcas-contenedor{
+.marcas-contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -253,7 +260,7 @@ section {
     margin-top: 60px;
 }
 
-.marca-tarjeta{
+.marca-tarjeta {
     background-color: #f7eccf;
     width: 280px;
     padding: 60px 20px 30px;
@@ -266,7 +273,7 @@ section {
     position: relative;
 }
 
-.marca-foto{
+.marca-foto {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -279,10 +286,8 @@ section {
     transform: translateX(-50%);
 }
 
-
-
 /*Footer*/
-footer      {
+footer {
     background-color: lightpink;
     text-align: center;
     padding: 15px 25px;
@@ -309,7 +314,7 @@ footer      {
 }
 
 /*Sección general*/
-section{
+section {
     padding: 25px;
 }
 
@@ -318,33 +323,33 @@ h2 {
     margin-bottom: 10px;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-p{
+p {
     line-height: 1.6;
     margin-bottom: 15px;
-    text-align: center;
 }
 
 /*Diseño responsivo*/
-@media screen and (max-width: 1024px){
-    .nav-principal{
+@media screen and (max-width: 1024px) {
+    .nav-principal {
         padding: 12px 16px;
     }
+
     .nav-tarjeta {
-        flex:1 1 260px;
+        flex: 1 1 260px;
     }
 }
 
 /*Diseño responsivo para tablets*/
-@media screen and (max-width: 768px){
-    .top-banner
-    {
+@media screen and (max-width: 768px) {
+    .top-banner {
         font-size: 12px;
         padding: 8px 12px;
     }
+
     .nav-principal {
         justify-content: center;
         gap: 12px;
@@ -374,7 +379,7 @@ p{
 }
 
 /*Diseño responsivo para celulares*/
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px) {
     .nav-principal {
         padding: 10px 12px;
     }
@@ -395,4 +400,3 @@ p{
         font-size: 22px;
     }
 }
-
